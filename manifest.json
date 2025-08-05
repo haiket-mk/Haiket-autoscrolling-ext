@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Auto Scroll",
+    "version": "1.0",
+    "description": "Rola a página automaticamente em intervalos definidos.",
+    "permissions": ["storage", "alarms", "activeTab", "scripting", "content_scripts"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "options_page": "options.html",
+    "action": {
+      "default_popup": "popup.html"
+    },
+ "content_scripts": [
+  {
+    "matches": ["<all_urls>"],
+    "js": ["content.js"]
+  }
+]
+  }
+  
